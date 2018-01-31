@@ -11,7 +11,7 @@
 
 return array(
 
-	'baseurl' => false,
+	'baseurl' => getenv('S3_BASE_URL'),
 
 	// The default configuration using a local file system setup
 	/*
