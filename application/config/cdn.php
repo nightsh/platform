@@ -14,23 +14,23 @@ return array(
 	'baseurl' => false,
 
 	// The default configuration using a local file system setup
+	/*
 	'type' => 'local',
 	'local' => [
 		// Where to upload media files eg. images. Take note of the trailing slash.
 		// This should be in the Document root.
 		'media_upload_dir' => APPPATH.'media'.DIRECTORY_SEPARATOR.'uploads'.DIRECTORY_SEPARATOR,
 	]
+	*/
 	// AWS S3 v3 CDN config example
-	/*
 	'type' => 'aws',
 	'aws' => [
-		'key'         => '',
-		'secret'      => '',
-		'region'      => '',
-		'version'     => '',
-		'bucket_name' => '',
+		'key'         => getenv('AWS_KEY'),
+		'secret'      => getenv('AWS_SECRET'),
+		'region'      => getenv('AWS_REGION'),
+		'version'     => getenv('AWS_VERSION'),
+		'bucket_name' => getenv('AWS_BUCKET'),
 	]
-	*/
 
 	// Rackspace CDN config example
 	/*
